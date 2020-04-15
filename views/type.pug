@@ -1,0 +1,50 @@
+doctype html
+html
+    head
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700")
+        link(rel="stylesheet" href="/list.css")
+        link(rel="stylesheet" href="/pok.css")
+        link(rel="stylesheet" href="/materialize.css")
+        link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+        link(href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet")
+        script(src="https://code.jquery.com/jquery-3.4.1.min.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js")
+    body
+        div(class="container")
+            div(class="poke")
+            include filter.pug
+            -for(var i=0; i<list.length; i+=2)
+                div(class="row")
+                    div(class="col m2 s2")
+                    div(class="col carr m4 s8 ")
+                        div(class="car center-align"): a(href=`/pokemon/${list[i].id}`)
+                            div(class="image"): img(src=`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${list[i].id}.png`, width ="150px", alt=`${list[i].name}`, onerror="this.onerror=null;this.src=`/404.png`;")
+                            div(class="text"): p #{list[i].name}
+                    if list[i+1] !== undefined 
+                        div(class="col carr m4 s8 offset-s2")
+                            div(class="car center-align"): a(href=`/pokemon/${list[i+1].id}`)
+                                div(class="image"): img(center-align src=`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${list[i+1].id}.png`, width ="150px", alt=`${list[i+1].name}`, onerror="this.onerror=null;this.src=`/404.png`;")
+                                div(class="text"): p #{list[i+1].name}
+                    else
+                        div(class="col carr m4 s8")
+                    div(class="col m2 s2")
+            div(class="row")
+                div(class="col m4 s12 offset-m4")
+                    form(id="pagination" class="center-align")
+                        input(type="text" id="page" style="width:30px" autocomplete="off" value=`${page}`)
+                        span / #{howManyPage}
+                        div(class="waves-effect" ): i(id="arrow" class="material-icons") chevron_right        
+        script(type='text/javascript').
+            let pokLastPage = #{pokLastPage};
+            console.log(pokLastPage);
+            let howManyPage = #{howManyPage};
+            let poktype = #{poktype};
+            console.log(howManyPage);
+            console.log(poktype);
+        script(src="/type.js")
+            //- |console.log(pokLastPage)
+            //- |let pokLastPage = pokLastPage
+            //- |let howManyPage = howManyPage
+            //- |console.log(pokLastPage)
+
+        

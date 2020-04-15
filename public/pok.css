@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+img{image-rendering: pixelated;}
+/* .container{
+    background-image: url(bck.png);
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    } */
+.poke{
+    background-image: url("/pok.png");
+    height: 90px;
+    line-height: 90px; 
+    position: sticky;
+    top:0;
+    z-index: 9999;
+    background-size: 100% 110%;
+    background-repeat:no-repeat;
+    border-bottom: 4px solid black;
+}
+
+
+#pokeball{
+    height: ;: 50px;
+}
+.navdiv{
+    margin-top: 15px;
+}
+.navigate{
+    border-radius: 30px;
+    background-color: blueviolet;
+    padding: 10px;
+    border: 4px solid black;
+    margin-bottom: 0px;
+}
+
+#namediv{
+    margin-bottom: 0px;
+}
+.named{
+    margin: 10px 0px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.name{
+    display: inline-block;
+    margin:0 auto;
+    text-transform: capitalize;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 17px;
+}
+
+.image{
+    margin-top: 0px;
+}
+
+.navi{
+    border: 4px solid white; 
+}
+
+.return{
+    background-color: #4CAF50;
+    border-radius: 12px;
+    color: white;
+    padding: 7px;
+    display: inline-block;
+    margin: 4px 2px;
+}
+
+.hidden{
+    visibility: hidden;
+    display: none;
+}
+
+.types{
+    width: 160px;
+    margin-top: 40px;
+}
+
+.typePokemon{
+    height: 17px;
+    line-height: 17px;
+    border-radius: 15px;
+    width: 160px;
+    background-color: #FFE4B5;
+    margin: 5px 0;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    border: 1px solid black;
+}
+
+#stat{
+    padding: 0 5px;
+}
+.meter{
+    margin-top: 6px;
+    position:relative;
+    background-color: #555;
+    -moz-border-radius:25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+    padding: 3px;
+    box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+}
+
+.meter>span{
+    display: block;
+    height:5px;
+    border-top-right-radius: 8px; 
+    border-bottom-right-radius:8px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: rgb(43,194,83);
+    box-shadow: 
+        inset 0 2px 9px rgba(255,255,255,0.3),
+        inset 0 -2px 6px rgba(0,0,0,0.4);
+        position: relative;
+        overflow: hidden;
+}
+
+#lista{
+    text-transform: capitalize;
+}
+#lista>li>.collapsible-header{
+    font-family: 'Montserrat';
+    font-weight: 700;
+}
+
+#lista>li>.collapsible-body, .id{
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-style: normal;
+}
+
+.collapsible>li:not(:last-child)>.collapsible-body>.collection>li:nth-child(6), .st:nth-child(6){
+    text-transform: uppercase;
+}
+
+#kg{
+text-transform: lowercase;
+}
+
+.collection>.collection-item>span>div{
+    display: inline-block;
+}
+
+.collection>.collection-item>span>div:nth-child(2){
+float: right;
+padding-right: 30px;
+}
+
+.id{
+margin-left: 30px;
+font-style: oblique;
+margin-bottom: 45px;
+font-size: 18px;
+}
+
+.scrollToTop{
+    position:fixed;
+    bottom: 80px;
+    right: 50px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #0063e8;
+    color: #fff;
+    display: none;
+}
+
+.scrollToTop>i{
+    height: 40px;
+    line-height: 40px;
+}
