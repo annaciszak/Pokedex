@@ -48,6 +48,8 @@ router.get('/pokemon/:nazwa', (req, res) => {
             pok.abilities = abilities;
             pok.moves = moves;
             console.log(pok.base_exp);
+            console.log(pok.pic);
+            console.log(pok.shiny);
             res.render('pokemon', { 'pokemon': pok, alphabeticalOrder });
         })
         .catch(function (error) {

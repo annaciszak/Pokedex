@@ -26,8 +26,14 @@ html
                        
             div(class="row image")
                 div(class="col m4 s6 center-align offset-m2 offset-s3")
-                    img(id="defaultPokemon", src=pokemon.pic, width="200px",alt="cos cos")
-                    img(id="shinyPokemon", class="hidden", src=pokemon.shiny, width="200px",alt="cos cos")
+                    if pokemon.pic != null
+                        img(id="defaultPokemon", src=pokemon.pic, width="200px",alt=pokemon.name)
+                    else 
+                        img(id="defaultPokemon", src="/unknown.png", width="200px",alt=pokemon.name)
+                    if pokemon.shiny != null
+                        img(id="shinyPokemon", class="hidden", src=pokemon.shiny, width="200px",alt=pokemon.name)
+                    else 
+                        img(id="shinyPokemon",class="hidden" src="/unknown.png", width="200px",alt=pokemon.name)
                 div(class="col m2 s2 types")
                     -if(pokemon.id.length == 1)
                         div(class="id") #00#{pokemon.id}

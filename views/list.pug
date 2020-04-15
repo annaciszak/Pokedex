@@ -18,12 +18,12 @@ html
                     div(class="col m2 s2")
                     div(class="col carr m4 s8")
                         div(class="car center-align"): a(href=`/pokemon/${list[i].id}`)
-                            div(class="image"): img(src=`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${list[i].id}.png`, width ="150px", alt=`${list[i].name}`, onerror="this.onerror=null;this.src=`/404.png`;")
+                            div(class="image"): img(src=`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${list[i].id}.png`, width ="150px", alt=`${list[i].name}`, onerror="this.onerror=null;this.src=`/unknown.png`;")
                             div(class="text"): p #{list[i].name}
                     if list[i+1] !== undefined
                         div(class="col carr m4 s8")
                             div(class="car center-align"): a(href=`/pokemon/${list[i+1].id}`)
-                                div(class="image"): img(center-align src=`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${list[i+1].id}.png`, width ="150px", alt=`${list[i+1].name}`, onerror="this.onerror=null;this.src=`/404.png`;")
+                                div(class="image"): img(center-align src=`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${list[i+1].id}.png`, width ="150px", alt=`${list[i+1].name}`, onerror="this.onerror=null;this.src=`/unknown.png`;")
                                 div(class="text"): p #{list[i+1].name}
                     else
                         div(class="col m4 s12")    
