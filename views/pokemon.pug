@@ -13,140 +13,135 @@ html
     body
         div(class='container')
             div(class="poke")
-            div(id="namediv" class=" row")
-                div(class="navdiv col m8 offset-m2")
-                    div(class="navigate row")
-                        div(class="col m2")
-                            button(class="return z-depth-3", onclick="window.history.back()")
-                                i(class="material-icons") navigate_before
-                        div(class="named col m8 center-align") 
-                            span(class="name") #{pokemon.name}
-                        div(class="col m2")
-                            img(id="pokeball",src="/pokeball1.png", alt="", srcset="", width="50px", onclick="change()")
-                       
-            div(class="row image")
-                div(class="col m4 s6 center-align offset-m2 offset-s3")
-                    if pokemon.pic != null
-                        img(id="defaultPokemon", src=pokemon.pic, width="200px",alt=pokemon.name)
-                    else 
-                        img(id="defaultPokemon", src="/unknown.png", width="200px",alt=pokemon.name)
-                    if pokemon.shiny != null
-                        img(id="shinyPokemon", class="hidden", src=pokemon.shiny, width="200px",alt=pokemon.name)
-                    else 
-                        img(id="shinyPokemon",class="hidden" src="/unknown.png", width="200px",alt=pokemon.name)
-                div(class="col m2 s2 types")
-                    -if(pokemon.id.length == 1)
-                        div(class="id") #00#{pokemon.id}
-                    -else if(pokemon.id.length == 2)
-                        div(class="id") #0#{pokemon.id}
-                    -else
-                        div(class="id") ##{pokemon.id}
-                    -for(var i=0; i<pokemon.types.length;i++)
-                        case pokemon.types[i]
-                            when 'normal' 
-                                div(class="typePokemon" style="background-color: #FFE4B5;") #{pokemon.types[i]} 
-                            when 'fighting' 
-                                div(class="typePokemon" style="background-color: #C0392B;") #{pokemon.types[i]} 
-                            when 'flying' 
-                                div(class="typePokemon" style="background-color: #D6EAF8;") #{pokemon.types[i]} 
-                            when 'poison' 
-                                div(class="typePokemon" style="background-color: #A569BD;") #{pokemon.types[i]} 
-                            when 'ground' 
-                                div(class="typePokemon" style="background-color: #E59866;") #{pokemon.types[i]} 
-                            when 'rock' 
-                                div(class="typePokemon" style="background-color: #99A3A4;") #{pokemon.types[i]} 
-                            when 'bug' 
-                                div(class="typePokemon" style="background-color: #CA6F1E;") #{pokemon.types[i]} 
-                            when 'ghost' 
-                                div(class="typePokemon" style="background-color: #EAEDED;") #{pokemon.types[i]} 
-                            when 'steel' 
-                                div(class="typePokemon" style="background-color: #B3B6B7;") #{pokemon.types[i]}
-                            when 'fire' 
-                                div(class="typePokemon" style="background-color: #EC7063;") #{pokemon.types[i]}
-                            when 'water' 
-                                div(class="typePokemon" style="background-color: #5DADE2;") #{pokemon.types[i]}  
-                            when 'grass' 
-                                div(class="typePokemon" style="background-color: #52BE80;") #{pokemon.types[i]}
-                            when 'electric' 
-                                div(class="typePokemon" style="background-color: #FFEE58;") #{pokemon.types[i]}
-                            when 'psychic' 
-                                div(class="typePokemon" style="background-color: #F5B041;") #{pokemon.types[i]}
-                            when 'ice' 
-                                div(class="typePokemon" style="background-color: #D6EAF8;") #{pokemon.types[i]}
-                            when 'dragon' 
-                                div(class="typePokemon" style="background-color: #76D7C4;") #{pokemon.types[i]}
-                            when 'dark' 
-                                div(class="typePokemon" style="background-color: #5D6D7E;") #{pokemon.types[i]}
-                            when 'fairy' 
-                                div(class="typePokemon" style="background-color: #FADBD8;") #{pokemon.types[i]}
-                div(class="col m1 s1")
             div(class="row")
-                div(class="col s8 offset-s2")
-                    ul(id="lista" class="collapsible")
-                        li  
-                            div(class="collapsible-header") About
-                            div(class="collapsible-body")
-                                ul(class="collection")
-                                    li(class="collection-item")
-                                        span
-                                            div weight 
-                                            div(id="kg") #{pokemon.weight} kg
-                                    li(class="collection-item")                                    
-                                        span 
-                                            div base experience
-                                            div #{pokemon.base_exp}
-                        li
-                            div(class="collapsible-header") Stats
-                            div(class="collapsible-body")    
-                                -for(var i=0; i<pokemon.stats.length;i++)
-                                    div(class="row st")
-                                        div(id="stat", class="col s4") #{pokemon.stats[i].stat} 
-                                        div(class="col s1") #{pokemon.stats[i].base_stat}
-                                        div(class="col s6")
-                                            div(class="meter animate")
-                                                case pokemon.stats[i].stat
-                                                    when 'speed'
-                                                        span(style=`width: ${((pokemon.stats[i].base_stat)/180)*100}%`)
-                                                    when 'special-defense'
-                                                        span(style=`width:${((pokemon.stats[i].base_stat)/230)*100}%`)
-                                                    when 'special-attack'
-                                                        span(style=`width:${((pokemon.stats[i].base_stat)/194)*100}%`)
-                                                    when 'defense'
-                                                        span(style=`width:${((pokemon.stats[i].base_stat)/230)*100}%`)
-                                                    when 'attack'
-                                                        span(style=`width:${((pokemon.stats[i].base_stat)/190)*100}%`)
-                                                    when 'hp'
-                                                        span(style=`width:${((pokemon.stats[i].base_stat)/255)*100}%`)
-                        li
-                            div(class="collapsible-header") EVs
-                            div(class="collapsible-body")
-                                ul(class="collection")
-                                    -for(var i=0; i<pokemon.stats.length;i++)
+                div(class="col m2 s2")
+                div(class="col m8 s8")
+                    div(id="namediv")
+                        div(class="navigate")
+                            div(class="btnRet")
+                                button(class="return z-depth-3", onclick="window.history.back()")
+                                    i(class="material-icons") navigate_before
+                            div(class="named ") 
+                                span(class="name") #{pokemon.name}
+                            div(class="click")
+                                img(id="pokeball",src="/pokeball1.png", alt="", srcset="", width="50px", onclick="change()")
+                    div(class=" image")
+                        div(class="imagePok")
+                            if pokemon.pic != null
+                                img(id="defaultPokemon", src=pokemon.pic, width="200px",alt=pokemon.name)
+                            else 
+                                img(id="defaultPokemon", src="/unknown.png", width="200px",alt=pokemon.name)
+                            if pokemon.shiny != null
+                                img(id="shinyPokemon", class="hidden", src=pokemon.shiny, width="200px",alt=pokemon.name)
+                            else 
+                                img(id="shinyPokemon",class="hidden" src="/unknown.png", width="200px",alt=pokemon.name)
+                        div(class="types")
+                            -if(pokemon.id.length == 1)
+                                div(class="id") #00#{pokemon.id}
+                            -else if(pokemon.id.length == 2)
+                                div(class="id") #0#{pokemon.id}
+                            -else
+                                div(class="id") ##{pokemon.id}
+                            -for(var i=0; i<pokemon.types.length;i++)
+                                case pokemon.types[i]
+                                    when 'normal' 
+                                        div(class="typePokemon" style="background-color: #FFE4B5;") #{pokemon.types[i]} 
+                                    when 'fighting' 
+                                        div(class="typePokemon" style="background-color: #C0392B;") #{pokemon.types[i]} 
+                                    when 'flying' 
+                                        div(class="typePokemon" style="background-color: #D6EAF8;") #{pokemon.types[i]} 
+                                    when 'poison' 
+                                        div(class="typePokemon" style="background-color: #A569BD;") #{pokemon.types[i]} 
+                                    when 'ground' 
+                                        div(class="typePokemon" style="background-color: #E59866;") #{pokemon.types[i]} 
+                                    when 'rock' 
+                                        div(class="typePokemon" style="background-color: #99A3A4;") #{pokemon.types[i]} 
+                                    when 'bug' 
+                                        div(class="typePokemon" style="background-color: #CA6F1E;") #{pokemon.types[i]} 
+                                    when 'ghost' 
+                                        div(class="typePokemon" style="background-color: #EAEDED;") #{pokemon.types[i]} 
+                                    when 'steel' 
+                                        div(class="typePokemon" style="background-color: #B3B6B7;") #{pokemon.types[i]}
+                                    when 'fire' 
+                                        div(class="typePokemon" style="background-color: #EC7063;") #{pokemon.types[i]}
+                                    when 'water' 
+                                        div(class="typePokemon" style="background-color: #5DADE2;") #{pokemon.types[i]}  
+                                    when 'grass' 
+                                        div(class="typePokemon" style="background-color: #52BE80;") #{pokemon.types[i]}
+                                    when 'electric' 
+                                        div(class="typePokemon" style="background-color: #FFEE58;") #{pokemon.types[i]}
+                                    when 'psychic' 
+                                        div(class="typePokemon" style="background-color: #F5B041;") #{pokemon.types[i]}
+                                    when 'ice' 
+                                        div(class="typePokemon" style="background-color: #D6EAF8;") #{pokemon.types[i]}
+                                    when 'dragon' 
+                                        div(class="typePokemon" style="background-color: #76D7C4;") #{pokemon.types[i]}
+                                    when 'dark' 
+                                        div(class="typePokemon" style="background-color: #5D6D7E;") #{pokemon.types[i]}
+                                    when 'fairy' 
+                                        div(class="typePokemon" style="background-color: #FADBD8;") #{pokemon.types[i]}
+                    div(class="l")
+                        ul(id="lista" class="collapsible")
+                            li  
+                                div(class="collapsible-header") About
+                                div(class="collapsible-body")
+                                    ul(class="collection")
                                         li(class="collection-item")
                                             span
-                                                div #{pokemon.stats[i].stat} 
-                                                div #{pokemon.stats[i].effort}
-                                            
-                                    //- div(class="row")
-                                    //- div(class="col s4")
-
-                        li 
-                            div(class="collapsible-header") Abilities
-                            div(class="collapsible-body")
-                                -var listAbilities = alphabeticalOrder(pokemon.abilities)
-                                ul(class="collection")
-                                    -for(var i =0; i<pokemon.abilities.length; i++)
-                                        li(class="collection-item") #{listAbilities[i]}
-                        li
-                            div(class="collapsible-header") Moves
-                            div(class="collapsible-body")
-                                -var listMoves = alphabeticalOrder(pokemon.moves)
-                                ul(class="collection")
-                                    -for (var i = 0; i < pokemon.moves.length; i++)
-                                        li(class="collection-item") #{listMoves[i]}
-            div(class="col s2")
-            a(href="#" class="scrollToTop")
-                i(class="fa fa-arrow-up" aria-hidden="true")
+                                                div weight 
+                                                div(id="kg") #{pokemon.weight} kg
+                                        li(class="collection-item")                                    
+                                            span 
+                                                div base experience
+                                                div #{pokemon.base_exp}
+                            li
+                                div(class="collapsible-header") Stats
+                                div(class="collapsible-body")    
+                                    -for(var i=0; i<pokemon.stats.length;i++)
+                                        div(class="st")
+                                            div(id="stat") #{pokemon.stats[i].stat} 
+                                            div #{pokemon.stats[i].base_stat}
+                                            div
+                                                div(class="meter animate")
+                                                    case pokemon.stats[i].stat
+                                                        when 'speed'
+                                                            span(style=`width: ${((pokemon.stats[i].base_stat)/180)*100}%`)
+                                                        when 'special-defense'
+                                                            span(style=`width:${((pokemon.stats[i].base_stat)/230)*100}%`)
+                                                        when 'special-attack'
+                                                            span(style=`width:${((pokemon.stats[i].base_stat)/194)*100}%`)
+                                                        when 'defense'
+                                                            span(style=`width:${((pokemon.stats[i].base_stat)/230)*100}%`)
+                                                        when 'attack'
+                                                            span(style=`width:${((pokemon.stats[i].base_stat)/190)*100}%`)
+                                                        when 'hp'
+                                                            span(style=`width:${((pokemon.stats[i].base_stat)/255)*100}%`)
+                            li
+                                div(class="collapsible-header") EVs
+                                div(class="collapsible-body")
+                                    ul(class="collection")
+                                        -for(var i=0; i<pokemon.stats.length;i++)
+                                            li(class="collection-item")
+                                                span
+                                                    div #{pokemon.stats[i].stat} 
+                                                    div #{pokemon.stats[i].effort}
+                            li 
+                                div(class="collapsible-header") Abilities
+                                div(class="collapsible-body")
+                                    -var listAbilities = alphabeticalOrder(pokemon.abilities)
+                                    ul(class="collection")
+                                        -for(var i =0; i<pokemon.abilities.length; i++)
+                                            li(class="collection-item") #{listAbilities[i]}
+                            li
+                                div(class="collapsible-header") Moves
+                                div(class="collapsible-body")
+                                    -var listMoves = alphabeticalOrder(pokemon.moves)
+                                    ul(class="collection")
+                                        -for (var i = 0; i < pokemon.moves.length; i++)
+                                            li(class="collection-item") #{listMoves[i]}
+                div(class="col s2")
+                a(href="#" class="scrollToTop")
+                    i(class="fa fa-arrow-up" aria-hidden="true")
         script(src="/pokemon.js")      
 
 
