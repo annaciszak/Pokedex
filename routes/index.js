@@ -4,16 +4,14 @@ const request = require('request');
 const router = express.Router();
 //konfiguracja ścieżki strony głównej
 //po wejściu na str główną renderowany jest szablon 'home'
-router.get('/', (req, res) => {
-    res.render('home');
-});
 
 var Pokedex = require('pokedex-promise-v2');
 var P = new Pokedex();
 
 
 router.get('/', (req, res) => {
-    res.render('home');
+    console.log('test');
+    res.redirect('/pokemon/list/1');
 });
 
 router.get('/pokemon/:nazwa', (req, res) => {
