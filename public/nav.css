@@ -1,0 +1,11 @@
+.poke{
+    background-image: url("/pok.png");
+    height: 90px;
+    line-height: 90px; 
+    position: sticky;
+    top:0;
+    z-index: 9999;
+    background-size: 100% 110%;
+    background-repeat:no-repeat;
+    border-bottom: 4px solid black;
+}

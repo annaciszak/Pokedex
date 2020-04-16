@@ -98,3 +98,10 @@ a{
 .chip:hover{
     background-color:#CACFD2 ;
 }
+
+#footer{
+    padding: 10px 0px;
+    border-top: 1px solid black;
+    margin-top: 40px;
+    font-size: 12px;
+}

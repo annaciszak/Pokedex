@@ -52,3 +52,10 @@ $(document).ready(function(){
         $('html,body').animate({scrollTop: 0}, 600)
     });
 });
+
+
+$(document).ready(function(){
+    $(window).resize(function(){
+        $(".fullheight").height($(document).height());
+    });
+});

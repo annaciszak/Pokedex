@@ -4,29 +4,33 @@ html
         link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700")
         link(rel="stylesheet" href="/materialize.css")
         link(rel="stylesheet" href="/pok.css")
+        link(rel="stylesheet" href="/nav.css")
         link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
         link(href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet")
         link(href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", rel="stylesheet")
         script(src="https://code.jquery.com/jquery-3.4.1.min.js")
         script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(content="text/html;charset=UTF-8")
 
     body
-        div(class='container')
+        div(class='container fullheight')
             div(class="poke")
-            div(class="row")
+            div(class="row" id="background")
                 div(class="col m2 s2")
                 div(class="col m8 s8")
-                    div(id="namediv")
-                        div(class="navigate")
+                    div(class="navigate")
+                        div(class="navimg")
                             div(class="btnRet")
                                 button(class="return z-depth-3", onclick="window.history.back()")
                                     i(class="material-icons") navigate_before
-                            div(class="named ") 
-                                span(class="name") #{pokemon.name}
+                            div(class="named") 
+                                h4(class="name") #{pokemon.name}
                             div(class="click")
                                 img(id="pokeball",src="/pokeball1.png", alt="", srcset="", width="50px", onclick="change()")
-                    div(class=" image")
-                        div(class="imagePok")
+                    div(class="row")
+                        div(class="col m6 s12 center-align")
+                            div(class="imagePok")
                             if pokemon.pic != null
                                 img(id="defaultPokemon", src=pokemon.pic, width="200px",alt=pokemon.name)
                             else 
@@ -35,7 +39,8 @@ html
                                 img(id="shinyPokemon", class="hidden", src=pokemon.shiny, width="200px",alt=pokemon.name)
                             else 
                                 img(id="shinyPokemon",class="hidden" src="/unknown.png", width="200px",alt=pokemon.name)
-                        div(class="types")
+                        
+                        div(class="col m6 s12 rmargin center-align")
                             -if(pokemon.id.length == 1)
                                 div(class="id") #00#{pokemon.id}
                             -else if(pokemon.id.length == 2)
@@ -51,7 +56,7 @@ html
                                     when 'flying' 
                                         div(class="typePokemon" style="background-color: #D6EAF8;") #{pokemon.types[i]} 
                                     when 'poison' 
-                                        div(class="typePokemon" style="background-color: #A569BD;") #{pokemon.types[i]} 
+                                        div(class="typePokemon center-align" style="background-color: #A569BD;") #{pokemon.types[i]} 
                                     when 'ground' 
                                         div(class="typePokemon" style="background-color: #E59866;") #{pokemon.types[i]} 
                                     when 'rock' 
@@ -131,7 +136,7 @@ html
                                     -var listAbilities = alphabeticalOrder(pokemon.abilities)
                                     ul(class="collection")
                                         -for(var i =0; i<pokemon.abilities.length; i++)
-                                            li(class="collection-item") #{listAbilities[i]}
+                                            li(id="item" class="collection-item") #{listAbilities[i]}
                             li
                                 div(class="collapsible-header") Moves
                                 div(class="collapsible-body")
@@ -140,8 +145,9 @@ html
                                         -for (var i = 0; i < pokemon.moves.length; i++)
                                             li(class="collection-item") #{listMoves[i]}
                 div(class="col s2")
-                a(href="#" class="scrollToTop")
-                    i(class="fa fa-arrow-up" aria-hidden="true")
+            include footer.pug
+            a(href="#" class="scrollToTop")
+                i(class="fa fa-arrow-up" aria-hidden="true")
         script(src="/pokemon.js")      
 
 
