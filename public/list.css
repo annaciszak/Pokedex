@@ -3,6 +3,7 @@
     min-width: 40vw;
 }
 
+
 .pokemons{
     margin-left: auto;
     margin-right: auto;
@@ -15,9 +16,6 @@
 }
 
 .carr{
-    /* background-image: (linear-gradient(#717D7E,#909497 )); */
-    /* background: rgb(120,157,125); */
-/* background: radial-gradient(circle, rgba(120,157,125,1) 54%, rgba(148,159,148,1) 84%); */
 height: auto;
 background-color:#85929E; 
 background: radial-gradient(circle, rgba(138,154,140,1) 54%, rgba(121,121,121,1) 95%);

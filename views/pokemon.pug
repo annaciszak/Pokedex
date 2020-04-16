@@ -14,7 +14,7 @@ html
         meta(content="text/html;charset=UTF-8")
 
     body
-        div(class='container fullheight')
+        div(class='container')
             div(class="poke")
             div(class="row" id="background")
                 div(class="col m2 s2")
@@ -145,9 +145,11 @@ html
                                         -for (var i = 0; i < pokemon.moves.length; i++)
                                             li(class="collection-item") #{listMoves[i]}
                 div(class="col s2")
-            include footer.pug
-            a(href="#" class="scrollToTop")
-                i(class="fa fa-arrow-up" aria-hidden="true")
+            div(class="row")
+                div(class="col m12 s12")
+                    div(class="footer-copyright center-align") Anna Ciszak © 2020 &lt;anna.ciszak@protonmail.com&gt;
+                a(href="#" class="scrollToTop")
+                    i(class="fa fa-arrow-up" aria-hidden="true")
         script(src="/pokemon.js")      
 
 
