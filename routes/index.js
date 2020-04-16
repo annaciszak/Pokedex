@@ -8,9 +8,7 @@ const router = express.Router();
 var Pokedex = require('pokedex-promise-v2');
 var P = new Pokedex();
 
-
 router.get('/', (req, res) => {
-    console.log('test');
     res.redirect('/pokemon/list/1');
 });
 
@@ -45,9 +43,6 @@ router.get('/pokemon/:nazwa', (req, res) => {
             pok.stats = stats;
             pok.abilities = abilities;
             pok.moves = moves;
-            console.log(pok.base_exp);
-            console.log(pok.pic);
-            console.log(pok.shiny);
             res.render('pokemon', { 'pokemon': pok, alphabeticalOrder });
         })
         .catch(function (error) {
@@ -70,7 +65,6 @@ router.get('/pokemon/list/:page', (req, res) => {
             }
             pok = pok1;
                 res.render('list', { 'list': pok, 'page' : req.params.page, 'howManyPage' : howManyPage, 'pokLastPage' : pokLastPage});
-            console.log(pok);
         })
         .catch(function (error) {
             console.log('There was an ERROR: ', error);
@@ -101,11 +95,6 @@ router.get('/type/:type/:page',(req,res) =>{
             pok = pok1;
             res.render('type', { 'list': pok, 'page' : req.params.page, 'poktype': req.params.type, 'howManyPage' : howManyPage, 'pokLastPage' : pokLastPage});
 
-            console.log(pok);
-            // console.log(req.params.page);
-            // console.log(req.params.type);
-            console.log(howManyPage);
-            // console.log(pokLastPage);
         })
         .catch(function (error) {
             console.log('There was an ERROR: ', error);
