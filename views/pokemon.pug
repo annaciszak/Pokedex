@@ -91,11 +91,11 @@ html
                                 div(class="collapsible-header") About
                                 div(class="collapsible-body")
                                     ul(class="collection")
-                                        li(class="collection-item")
+                                        li(class="collection-item" id="item")
                                             span
                                                 div weight 
                                                 div(id="kg") #{pokemon.weight} kg
-                                        li(class="collection-item")                                    
+                                        li(class="collection-item" id="item")                                    
                                             span 
                                                 div base experience
                                                 div #{pokemon.base_exp}
@@ -126,7 +126,7 @@ html
                                 div(class="collapsible-body")
                                     ul(class="collection")
                                         -for(var i=0; i<pokemon.stats.length;i++)
-                                            li(class="collection-item")
+                                            li(class="collection-item" id="item")
                                                 span
                                                     div #{pokemon.stats[i].stat} 
                                                     div #{pokemon.stats[i].effort}
@@ -143,11 +143,11 @@ html
                                     -var listMoves = alphabeticalOrder(pokemon.moves)
                                     ul(class="collection")
                                         -for (var i = 0; i < pokemon.moves.length; i++)
-                                            li(class="collection-item") #{listMoves[i]}
+                                            li(class="collection-item" id="item") #{listMoves[i]}
                 div(class="col s2")
             div(class="row")
                 div(class="col m12 s12")
-                    div(class="footer-copyright center-align") Anna Ciszak © 2020 &lt;anna.ciszak@protonmail.com&gt;
+                    div(class="footer-copyright center-align" id="footer") Anna Ciszak © 2020 &lt;anna.ciszak@protonmail.com&gt;
                 a(href="#" class="scrollToTop")
                     i(class="fa fa-arrow-up" aria-hidden="true")
         script(src="/pokemon.js")      

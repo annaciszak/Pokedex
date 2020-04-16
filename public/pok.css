@@ -15,8 +15,9 @@ img{image-rendering: pixelated;}
 .container{
     min-width: 600px;
     background-color: red;
-    height: 100%;
+    height: auto;
     overflow-y: auto;
+    min-height: 1100px;
 }
 
 #background>div:nth-child(2){
@@ -239,6 +240,7 @@ font-size: 18px;
     border-top: 1px solid black;
     margin-top: 40px;
     font-size: 12px;
+    bottom: 0;
 }
 
 @media only screen and (min-width:600px){
