@@ -45,7 +45,9 @@ html,body{
 #pokeball{
     height: 50px;
     top:50%;
-    margin-top:20px;}
+    margin-top:20px;
+    cursor: pointer;
+}
 
 .navimg{
     width: 100%;
@@ -95,6 +97,7 @@ html,body{
     border-radius: 30px;
     color: white;
     padding: 7px;
+    cursor: pointer;
 }
 
 .hidden{
