@@ -1,6 +1,8 @@
 # Pokedex
-<h4 align="center">Project title</h4>
-
+<p align="center">
+<img src="/public/logo1.PNG" width="90%">  
+</p>
+                                   
 <p align="center">
   <a >
     <img src=""
@@ -18,30 +20,20 @@ Project is created with:
 * JQuery
 * Materialize 1.0.0
 
-## Screenshots 📺
-
+## Demo 📺
 <p align="center">
-    <img src="" alt="Screenshot">
-</p>
-
-<p align="center">
-    <img src="" alt="Screenshot">
-</p>
-
-<p align="center">
-    <img src="" alt="Screenshot">
+  <img src="/public/pokemon.gif"/>
 </p>
 
 ## Code Example/Issues 🔍
 
 
-## Installation 💾
 
 ## Available scripts
 
 | Command                   | Description                   |
 | ------------------------- | ----------------------------- |
-| `npm install`             | dhjk                          |
+| `npm install`             | installation all essential packages                          |
 | `npm start`               | Open http://localhost:3000/ to see app.             |
 
 ## Setup
