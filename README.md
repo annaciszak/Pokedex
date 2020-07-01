@@ -1,19 +1,4 @@
 # Pokedex
-
-<h1 align="center">
-
-<br>
-
-<p align="center">
-<img src=""  alt="Logo">
-</p>
-
-<br>
-
-<br>
-
-</h1>
-
 <h4 align="center">Project title</h4>
 
 <p align="center">
