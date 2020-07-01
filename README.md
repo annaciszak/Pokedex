@@ -3,13 +3,6 @@
 <img src="/public/logo1.png" width="80%">  
 </p>
                                    
-<p align="center">
-  <a >
-    <img src=""
-         alt="Screenshot">
-  </a>
-</p>
-
 ## Project Overview 🎉
 
 ## Technologies 🔧
