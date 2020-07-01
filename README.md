@@ -1,6 +1,6 @@
 # Pokedex
 <p align="center">
-<img src="/public/logo1.PNG" width="90%">  
+<img src="/public/logo1.png" width="80%">  
 </p>
                                    
 <p align="center">
@@ -21,8 +21,8 @@ Project is created with:
 * Materialize 1.0.0
 
 ## Demo 📺
-<p align="center">
   <img src="/public/pokemon.gif"/>
+<p align="center">
 </p>
 
 ## Code Example/Issues 🔍
