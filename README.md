@@ -19,7 +19,7 @@ Project is created with:
   <img src="/public/pokemon.gif"/>
 
 ## Setup
-To run this project, install it locally using npm:
+To run this project, follow the instructions below:
 
 ```
 $ git clone https://github.com/annaciszak/Pokedex.git
