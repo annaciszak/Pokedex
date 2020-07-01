@@ -11,6 +11,7 @@ Project is created with:
 * CSS
 * Javascript
 * JQuery
+* Node.js
 * Materialize 1.0.0
 
 ## Demo 📺
