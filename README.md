@@ -1,16 +1,10 @@
 # Pokedex
 <p align="center">
-<img src="/public/logo1.PNG" width="90%">  
+<img src="/public/logo1.png" width="80%">  
 </p>
                                    
-<p align="center">
-  <a >
-    <img src=""
-         alt="Screenshot">
-  </a>
-</p>
-
 ## Project Overview 🎉
+Pokédex connected to PokéAPI.
 
 ## Technologies 🔧
 Project is created with:
@@ -18,31 +12,20 @@ Project is created with:
 * CSS
 * Javascript
 * JQuery
+* Node.js
 * Materialize 1.0.0
 
 ## Demo 📺
-<p align="center">
   <img src="/public/pokemon.gif"/>
-</p>
-
-## Code Example/Issues 🔍
-
-
-
-## Available scripts
-
-| Command                   | Description                   |
-| ------------------------- | ----------------------------- |
-| `npm install`             | installation all essential packages                          |
-| `npm start`               | Open http://localhost:3000/ to see app.             |
 
 ## Setup
-To run this project, install it locally using npm:
+To run this project, follow the instructions below:
 
 ```
-$ cd ../Pokedex/
-$ npm install     installation all essential packages
-$ npm start       open localhost::3000 in Browser to see app
+$ git clone https://github.com/annaciszak/Pokedex.git
+$ cd Pokedex/
+$ npm install     install all essential packages
+$ npm start       open localhost::3000 in browser to see app
 ```
 
 
